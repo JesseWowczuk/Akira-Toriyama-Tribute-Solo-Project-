@@ -6,6 +6,7 @@ const test = (req, res) => {
   res.json('test is working')
 }
 
+//register end point
 const registerUser = async (req, res) => {
   try{
     const {name, password} = req.body;
@@ -41,9 +42,37 @@ const registerUser = async (req, res) => {
   } catch(error) {
       console.log(error)
   } 
+};
+
+// Login end point
+const loginUser = async (req, res) => {
+  try {
+    const {name, password} = req.body;
+
+    //check if user exist
+    const user = await User.findOne({name});
+    if(!name) {
+      return res.json({
+        error: 'No user found'
+      })
+    }
+
+    //check if password match
+    const match = await comparePassword(password, user.password);
+    if (match) {
+      console.log('Everything matches')
+      return res.json({
+        message: 'Password match'
+      })
+    } 
+
+  } catch (error) {
+      console.log(error)
+  }
 }
 
 module.exports = {
   test,
-  registerUser
+  registerUser,
+  loginUser,
 }
