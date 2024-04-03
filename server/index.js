@@ -5,9 +5,7 @@ const cors = require('cors')
 const app = express();
 const port = 8000;
 
+app.use('/', require('./routes/userRoutes'))
 
 
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`); 
-});
+app.listen(port, () => console.log(`Server is running on http://localhost:${port}`))
