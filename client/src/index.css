@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #535bf2;
   background-color: #242424;
 
   font-synthesis: none;
@@ -15,20 +15,39 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #535bf2;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
 }
 
+@keyframes flowBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 10%; /* Move the background image down by 5% */
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;    
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/017/937/161/large/gop-gap-sketch573-2.jpg?1557919377);
+  animation: flowBackground 10s linear infinite;
+  /* background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f6de84a7-33be-4e67-9379-d9cb8755508d/dh0w1g1-3872008f-f803-4352-aa7a-515fb370194a.png/v1/fill/w_1194,h_669,q_70,strp/tribute_to_akira_toriyama_by_matrixmural_dh0w1g1-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvZjZkZTg0YTctMzNiZS00ZTY3LTkzNzktZDljYjg3NTU1MDhkXC9kaDB3MWcxLTM4NzIwMDhmLWY4MDMtNDM1Mi1hYTdhLTUxNWZiMzcwMTk0YS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aGAxa3PEkf2XSCYswUyUyuwHnQglXxj5cFD_NvhX_DA); */
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -36,7 +55,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -54,7 +73,33 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+.submit-btn {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #535bf2;
+}
+
+.submit-btn:hover {
+  color: #535bf2;
+}
+
+.login-btn {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #535bf2;
+}
+
+.login-btn:hover {
+  color: #535bf2;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -66,3 +111,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+  /* margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */ 
