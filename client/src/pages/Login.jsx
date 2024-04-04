@@ -22,7 +22,7 @@ export default function Login() {
         toast.error(data.error)
       } else {
         setData({});
-        navigate('/') //************after user login in redirect user to home page */
+        navigate('/dashboard') //************after user login in redirect user to Dashboard page */
       }
     } catch (error) {
         console.log(error)
