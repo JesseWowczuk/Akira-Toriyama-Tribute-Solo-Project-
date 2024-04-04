@@ -1,6 +1,7 @@
 const User = require('../models/user')
 const { hashPassword, comparePassword } = require('../helpers/auth')
 const { hash } = require('bcrypt')
+const jwt = require('jsonwebtoken');
 
 const test = (req, res) => {
   res.json('test is working')
@@ -60,7 +61,10 @@ const loginUser = async (req, res) => {
     //check if password match
     const match = await comparePassword(password, user.password);
     if (match) {
-      return res.json('Password match')
+      jwt.sign({name: user.name, id: user._id}, process.env.JWT_SECRET, {}, (err, token) => {
+        if(err) throw err;
+        res.cookie('token', token).json(user)
+      })
     } 
     if (!match) {
       return res.json({
