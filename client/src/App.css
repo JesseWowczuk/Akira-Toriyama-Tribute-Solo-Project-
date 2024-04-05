@@ -7,8 +7,11 @@
   position: relative;
   top: 340px;
   right: 55px;
-}
 
+  position: relative; /* Ensure z-index works */
+  z-index: 0; /* Default z-index */
+  /* background-image: url(./assets/forjesse.png); */
+}
 
 
 /* .logo {

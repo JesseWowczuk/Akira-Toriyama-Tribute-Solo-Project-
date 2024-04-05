@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Saiyan Sans';
+}
+
 a {
   font-weight: 500;
   color: #535bf2;
@@ -42,16 +46,26 @@ body {
   align-items: center;
   min-height: 100vh;    
   background-size: cover;
-  background-position: center;
-  background-image: url(https://cdnb.artstation.com/p/assets/images/images/017/937/161/large/gop-gap-sketch573-2.jpg?1557919377);
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-image: url(assets/forjesse.png);
   animation: flowBackground 10s linear infinite;
+  font-family: 'Saiyan Sans', sans-serif;
+  /* https://cdnb.artstation.com/p/assets/images/images/017/937/161/large/gop-gap-sketch573-2.jpg?1557919377 */
   /* background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f6de84a7-33be-4e67-9379-d9cb8755508d/dh0w1g1-3872008f-f803-4352-aa7a-515fb370194a.png/v1/fill/w_1194,h_669,q_70,strp/tribute_to_akira_toriyama_by_matrixmural_dh0w1g1-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvZjZkZTg0YTctMzNiZS00ZTY3LTkzNzktZDljYjg3NTU1MDhkXC9kaDB3MWcxLTM4NzIwMDhmLWY4MDMtNDM1Mi1hYTdhLTUxNWZiMzcwMTk0YS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aGAxa3PEkf2XSCYswUyUyuwHnQglXxj5cFD_NvhX_DA); */
 }
+
+/* .background-image {
+  background-image: url(assets/forjesse.png);
+  /* height: 100%; */
+
+
 
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: 'Saiyan Sans', sans-serif;
 }
 
 button {
@@ -74,7 +88,7 @@ button:focus-visible {
 }
 
 .submit-btn {
-  font-size: 14px;
+  font-size: 20px;
   padding: 5px 10px;
   color: #535bf2;
 }
@@ -84,7 +98,7 @@ button:focus-visible {
 }
 
 .login-btn {
-  font-size: 14px;
+  font-size: 20px;
   padding: 5px 10px;
   color: #535bf2;
 }
@@ -96,8 +110,29 @@ button:focus-visible {
 .tabs {
   display: flex;
   justify-content: space-evenly;
-  font-size: 20px;
+  font-size: 50px;
 }
+
+label {
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
+input {
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+/* .white-box {
+  display: flexbox;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px; 
+  height: 370px; 
+  background-color: white;
+  z-index: 999; 
+} */
 
 /* @media (prefers-color-scheme: light) {
   :root {
